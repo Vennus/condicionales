@@ -1,11 +1,15 @@
 //Escribe aquí tu código
-var numero=function(a,b){
-	if (a>=0){
-		return a + "Numero Negativo"
-	} else if (b< 0 || b != 0){
-		return b + "Numero Positivo"
-	}
+var numero;
+var condicion = true;
+do {
+	numero = parseInt(prompt("Ingrese el numero"));
+	if(isNaN(numero)) alert("Ingrese un numero por favor");
+	else condicion = false;
+} while(condicion);
+if(numero>0){
+	alert("El numero es positivo");
+} else if (numero==0){
+	alert("El numero es igual ");
+} else {
+	alert("El numero es negativo ")
 }
-console.log(numero(-4,6));
-console.log(numero(-2,10));
-console.log(numero(5,-5));

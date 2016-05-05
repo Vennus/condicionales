@@ -1,10 +1,13 @@
 //Escribe aquí tu código
-var descuento =function(precio){
-	if (precio>2500){
-		return " 'Felicitaciones ganaste un descuento del 15%' y tu total es " + precio*0.15
+var cantidad=parseInt(prompt("¿cuantos trajes comprara?"));
+for(var c = 1; c<=cantidad;c++)
+	var precio =parseFloat(prompt("Ingresa el precipo del traje" +c));
+	if (precio>=2500){
+		alert (" Felicitaciones ganaste un descuento del 15% ");
+		precio=precio*0.85;
+		alert("Total a pagar es: "+precio)
 	} else {
-		return " 'Felicitaciones ganaste un descuento del 8%' y tu total es " + precio*0.08
+		alert ("Felicitaciones ganaste un descuento del 8% ");
+		precio=precio*0.92;
+		alert("Total a pagar es: " + precio);
 	}
-}
-console.log(descuento(2600));
-console.log(descuento(500));
